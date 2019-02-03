@@ -1,5 +1,6 @@
 //app.js
 //改动后进行的提交
+//github上改动的
 App({
 
   globalData: {
