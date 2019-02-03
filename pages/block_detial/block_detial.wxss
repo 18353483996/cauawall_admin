@@ -1,0 +1,60 @@
+/* pages/block_detial/block_detial.wxss */
+
+.contain{
+  width: 750rpx;
+  background-color: rgb(207, 207, 207);
+}
+
+.detial_block {
+  display: flex;
+  flex-direction: column;
+}
+
+.detial_scroll {
+  width: 750rpx;
+}
+
+.block_in {
+  margin-bottom: 10px;
+  margin-top: 5px;
+  padding: 10px;
+  background-color: white;
+}
+
+.block_img {
+  height: 24px;
+  width: 24px;
+  border-radius: 50%;
+}
+
+.block_title {
+  font-size: 20px;
+  margin-left: 70rpx;
+  margin-top: 30rpx;
+  margin-bottom: 30rpx;
+}
+
+.block_content{
+  font-size: 16px;
+  margin-left: 70rpx;
+  margin-top: 30rpx;
+  margin-bottom: 30rpx;
+}
+
+.block_user {
+  display: flex;
+  direction: row;
+  align-items: center;
+}
+
+.block_name {
+  font-size: 14px;
+  color: #888;
+  margin-left: 10px;
+}
+
+.blockgood_img{
+  height: 18px;
+  width: 18px;
+  margin-right: 15rpx;
+}

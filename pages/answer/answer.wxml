@@ -1,0 +1,231 @@
+<!--pages/answer/answer.wxml-->
+<view class="contain" style="height:{{answer_height}}rpx">
+  <swiper current="{{currentTab}}" bindchange="nav_change" class="body" style="height:{{answer_height-100}}rpx">
+    <swiper-item catchtouchmove="stopTouchMove">
+      <view class="nav_tap">
+        <view class="{{currentTab_detial==index?'active':'default'}}" wx:for="{{navbarlist}}" wx:key="" bindtap="navbarBindtap" id="{{index}}">
+          {{item}}
+        </view>
+      </view>
+      <view class="detial" style="height:{{answer_height-150}}rpx">
+        <swiper current="{{currentTab_detial}}" bindchange="detial_change" class="detial" style="height:{{answer_height-150}}rpx">
+          <swiper-item>
+            <scroll-view scroll-y="true" class="detial_scroll" style="height:{{answer_height-150}}rpx" bindscrolltoupper="refresh">
+              
+                <view class="detial_block" wx:for="{{detial_all}}" wx:key="">
+                  <view class="block_in" bindtap="onTouch_all" data-userurl="{{item.userurl}}" data-username="{{item.username}}" data-category="{{item.category}}" data-created_at="{{item.created_at}}" data-content="{{item.questionInfo.content}}" data-title="{{item.questionInfo.title}}" id="{{item.id}}">
+                    <view class="block_user">
+                      <image class="block_img" src="{{item.userurl}}"> </image>
+                      <view style="display: flex; justify-content: space-between;width: 650rpx;">
+                        <text class="block_name">{{item.username}}</text>
+                        <text class="block_name">{{item.created_at}}</text>
+                      </view>
+                    </view>
+                    <view class="block_title">
+                      {{item.questionInfo.title}}
+                    </view>
+                    <view style="display: flex; justify-content: space-between;">
+                      <text style="font-size: 15px; color: #888888;">有关·{{item.category}}</text>
+                      <view>
+                        <image class="blockgood_img" src="/img/pinglun.png"></image>
+                        <text style="font-size: 18px; color: #888888;">35</text>
+                      </view>
+                    </view>
+                  </view>
+                </view>
+              
+            </scroll-view>
+          </swiper-item>
+          <swiper-item>
+            <scroll-view scroll-y="true" class="detial_scroll" style="height:{{answer_height-150}}rpx">
+              <navigator url="../block_detial/block_detial">
+                <view class="detial_block" wx:for="{{detial_card}}" wx:key="">
+                  <view class="block_in">
+                    <view class="block_user">
+                      <image class="block_img" src="{{item.userurl}}"> </image>
+                      <view style="display: flex; justify-content: space-between;width: 650rpx;">
+                        <text class="block_name">{{item.username}}</text>
+                        <text class="block_name">{{item.created_at}}</text>
+                      </view>
+                    </view>
+                    <view class="block_title">
+                      {{item.questionInfo.title}}
+                    </view>
+                    <view style="display: flex; justify-content: space-between;">
+                      <view>
+                        <image class="blockgood_img" src="/img/dianzan.png"></image>
+                        <text style="font-size: 18px; color: #888888;">35</text>
+                      </view>
+                      <view>
+                        <image class="blockgood_img" src="/img/pinglun.png"></image>
+                        <text style="font-size: 18px; color: #888888;">35</text>
+                      </view>
+                    </view>
+                  </view>
+                </view>
+              </navigator>
+            </scroll-view>
+          </swiper-item>
+          <swiper-item>
+            <scroll-view scroll-y="true" class="detial_scroll" style="height:{{answer_height-150}}rpx">
+              <navigator url="../block_detial/block_detial">
+                <view class="detial_block" wx:for="{{detial_contest}}" wx:key="">
+                  <view class="block_in">
+                    <view class="block_user">
+                      <image class="block_img" src="{{item.userurl}}"> </image>
+                      <view style="display: flex; justify-content: space-between;width: 650rpx;">
+                        <text class="block_name">{{item.username}}</text>
+                        <text class="block_name">{{item.created_at}}</text>
+                      </view>
+                    </view>
+                    <view class="block_title">
+                      {{item.questionInfo.title}}
+                    </view>
+                    <view style="display: flex; justify-content: space-between;">
+                      <view>
+                        <image class="blockgood_img" src="/img/dianzan.png"></image>
+                        <text style="font-size: 18px; color: #888888;">35</text>
+                      </view>
+                      <view>
+                        <image class="blockgood_img" src="/img/pinglun.png"></image>
+                        <text style="font-size: 18px; color: #888888;">35</text>
+                      </view>
+                    </view>
+                  </view>
+                </view>
+              </navigator>
+            </scroll-view>
+          </swiper-item>
+          <swiper-item>
+            <scroll-view scroll-y="true" class="detial_scroll" style="height:{{answer_height-150}}rpx">
+              <navigator url="../block_detial/block_detial">
+                <view class="detial_block" wx:for="{{detial_messhall}}" wx:key="">
+                  <view class="block_in">
+                    <view class="block_user">
+                      <image class="block_img" src="{{item.userurl}}"> </image>
+                      <view style="display: flex; justify-content: space-between;width: 650rpx;">
+                        <text class="block_name">{{item.username}}</text>
+                        <text class="block_name">{{item.created_at}}</text>
+                      </view>
+                    </view>
+                    <view class="block_title">
+                      {{item.questionInfo.title}}
+                    </view>
+                    <view style="display: flex; justify-content: space-between;">
+                      <view>
+                        <image class="blockgood_img" src="/img/dianzan.png"></image>
+                        <text style="font-size: 18px; color: #888888;">35</text>
+                      </view>
+                      <view>
+                        <image class="blockgood_img" src="/img/pinglun.png"></image>
+                        <text style="font-size: 18px; color: #888888;">35</text>
+                      </view>
+                    </view>
+                  </view>
+                </view>
+              </navigator>
+            </scroll-view>
+          </swiper-item>
+          <swiper-item>
+            <scroll-view scroll-y="true" class="detial_scroll" style="height:{{answer_height-150}}rpx">
+              <navigator url="../block_detial/block_detial">
+                <view class="detial_block" wx:for="{{detial_notification}}" wx:key="">
+                  <view class="block_in">
+                    <view class="block_user">
+                      <image class="block_img" src="{{item.userurl}}"> </image>
+                      <view style="display: flex; justify-content: space-between;width: 650rpx;">
+                        <text class="block_name">{{item.username}}</text>
+                        <text class="block_name">{{item.created_at}}</text>
+                      </view>
+                    </view>
+                    <view class="block_title">
+                      {{item.questionInfo.title}}
+                    </view>
+                    <view style="display: flex; justify-content: space-between;">
+                      <view>
+                        <image class="blockgood_img" src="/img/dianzan.png"></image>
+                        <text style="font-size: 18px; color: #888888;">35</text>
+                      </view>
+                      <view>
+                        <image class="blockgood_img" src="/img/pinglun.png"></image>
+                        <text style="font-size: 18px; color: #888888;">35</text>
+                      </view>
+                    </view>
+                  </view>
+                </view>
+              </navigator>
+            </scroll-view>
+          </swiper-item>
+          <swiper-item>
+            <scroll-view scroll-y="true" class="detial_scroll" style="height:{{answer_height-150}}rpx">
+              <navigator url="../block_detial/block_detial">
+                <view class="detial_block" wx:for="{{detial_others}}" wx:key="">
+                  <view class="block_in">
+                    <view class="block_user">
+                      <image class="block_img" src="{{item.userurl}}"> </image>
+                      <view style="display: flex; justify-content: space-between;width: 650rpx;">
+                        <text class="block_name">{{item.username}}</text>
+                        <text class="block_name">{{item.created_at}}</text>
+                      </view>
+                    </view>
+                    <view class="block_title">
+                      {{item.questionInfo.title}}
+                    </view>
+                    <view style="display: flex; justify-content: space-between;">
+                      <view>
+                        <image class="blockgood_img" src="/img/dianzan.png"></image>
+                        <text style="font-size: 18px; color: #888888;">35</text>
+                      </view>
+                      <view>
+                        <image class="blockgood_img" src="/img/pinglun.png"></image>
+                        <text style="font-size: 18px; color: #888888;">35</text>
+                      </view>
+                    </view>
+                  </view>
+                </view>
+              </navigator>
+            </scroll-view>
+          </swiper-item>
+        </swiper>
+      </view>
+    </swiper-item>
+    <swiper-item catchtouchmove="stopTouchMove">
+      <view>消息</view>
+    </swiper-item>
+    <swiper-item catchtouchmove="stopTouchMove">
+      <view>收藏</view>
+    </swiper-item>
+    <swiper-item catchtouchmove="stopTouchMove">
+      <view>我的</view>
+    </swiper-item>
+  </swiper>
+
+  <view class="endtab">
+    <navigator url="../add/add">
+      <view class="count_out">
+        <view class="count_med">
+          <image class="count" src="/img/jia.png"></image>
+        </view>
+      </view>
+    </navigator>
+    <view class="say">
+      发问题
+    </view>
+    <view class="self" bindtap="self">
+      <image class="self_img" src="{{img_self}}"></image>
+      <view class="self_name" style="color: {{color_self}};">我的</view>
+    </view>
+    <view class="star" bindtap="star">
+      <image class="self_img" src="{{img_star}}"></image>
+      <view class="self_name" style="color: {{color_star}};">收藏</view>
+    </view>
+    <view class="xiaoxi" bindtap="xiaoxi">
+      <image class="self_img" src="{{img_xiaxi}}"></image>
+      <view class="self_name" style="color: {{color_xiaoxi}};">消息</view>
+    </view>
+    <view class="head" bindtap="head">
+      <image class="self_img" src="{{img_head}}"></image>
+      <view class="self_name" style="color: {{color_head}};">首页</view>
+    </view>
+  </view>
+</view>

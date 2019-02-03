@@ -1,0 +1,24 @@
+<!--pages/add/add.wxml-->
+<view class="contain" style="height:{{add_height}}rpx">
+  <form bindsubmit="formSubmit">
+    <view class="question_dis">
+      <textarea maxlength="30" style="font-size: 40rpx; height: 130rpx;width: 730rpx;" placeholder="标题（以问号结尾且不得超过30个字）" name="title" />
+    </view>
+    <view class="question_detial">
+      <textarea maxlength="-1" style="font-size: 40rpx; height: 430rpx;width: 730rpx" placeholder="详细描述" name="content" />
+    </view>
+    <view class="classify">
+      <view class="classify_name">
+        问题分类
+      </view>
+      <picker class="picker" bindchange="bindPickerChange" value="{{index}}" range="{{categoryList}}" name="index">
+        <view class="picker_in">
+          {{categoryList[index]}}
+        </view>
+      </picker>
+    </view>
+    <button class="offer" type="primary" form-type="submit" size="default" loading="{{loading}}" plain="{{plain}}" disabled="{{disabled}}">
+      发布
+    </button>
+  </form>
+</view>

@@ -1,0 +1,228 @@
+/* pages/answer/answer.wxss */
+
+.contain {
+  width: 100%;
+  /* display: flex; */
+  color: rgb(0, 0, 0);
+  /* flex-direction: column; *//* align-items: center;
+  justify-content: center; */
+  background-color: rgb(255, 255, 255);
+}
+
+.nav {
+  position: absolute;
+  height: 70rpx;
+  width: 750rpx;
+  z-index: 1;
+  border-bottom: 2rpx solid rgb(207, 207, 207);
+}
+
+.body {
+  position: absolute;
+  width: 750rpx;
+  z-index: 1;
+  background-color: rgb(236, 236, 236);
+}
+
+.endtab {
+  position: absolute;
+  height: 100rpx;
+  width: 750rpx;
+  z-index: 1;
+  bottom: 1rpx;
+}
+
+.say {
+  position: absolute;
+  bottom: 1rpx;
+  font-size: 20rpx;
+  left: 355rpx;
+  z-index: 2;
+}
+
+.count_out {
+  position: absolute;
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+  z-index: 2;
+  left: 325rpx;
+  bottom: 20rpx;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.count_med {
+  width: 90rpx;
+  height: 90rpx;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(121, 121, 121);
+}
+
+.count {
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 50%;
+}
+
+.self {
+  position: absolute;
+  z-index: 2;
+  width: 90rpx;
+  height: 95rpx;
+  bottom: 3rpx;
+  right: 20rpx;
+  display: flex;
+  color: rgb(0, 0, 0);
+  flex-direction: column;
+  align-items: center;
+}
+
+.self_img {
+  width: 65rpx;
+  height: 80rpx;
+}
+
+.self_name {
+  font-size: 20rpx;
+}
+
+.star {
+  position: absolute;
+  z-index: 2;
+  width: 90rpx;
+  height: 95rpx;
+  bottom: 3rpx;
+  right: 170rpx;
+  display: flex;
+  color: rgb(0, 0, 0);
+  flex-direction: column;
+  align-items: center;
+}
+
+.xiaoxi {
+  position: absolute;
+  z-index: 2;
+  width: 90rpx;
+  height: 95rpx;
+  bottom: 3rpx;
+  left: 180rpx;
+  display: flex;
+  color: rgb(0, 0, 0);
+  flex-direction: column;
+  align-items: center;
+}
+
+.head {
+  position: absolute;
+  z-index: 2;
+  width: 90rpx;
+  height: 95rpx;
+  bottom: 3rpx;
+  left: 25rpx;
+  display: flex;
+  color: rgb(0, 0, 0);
+  flex-direction: column;
+  align-items: center;
+}
+
+.head_img {
+  width: 60rpx;
+  height: 60rpx;
+}
+
+.nav_tap {
+  height: 50rpx;
+  width: 750rpx;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: inherit;
+  /* flex-wrap: wrap; */
+}
+
+.active {
+  margin-left: 40rpx;
+  font-size: 25rpx;
+  color: #1296db;
+  height: 40rpx;
+  display: flex;
+  direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.default {
+  margin-left: 40rpx;
+  font-size: 25rpx;
+  color: #000;
+  height: 40rpx;
+  display: flex;
+  direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.detial {
+  display: flex;
+  direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 750rpx;
+  background-color: rgb(236, 236, 236);
+}
+
+.detial_block {
+  display: flex;
+  flex-direction: column;
+}
+
+.detial_scroll {
+  width: 750rpx;
+}
+
+.block_in {
+  margin-bottom: 10px;
+  margin-top: 5px;
+  padding: 10px;
+  background-color: white;
+}
+
+.block_img {
+  height: 24px;
+  width: 24px;
+  border-radius: 50%;
+}
+
+.block_title {
+  font-size: 20px;
+  margin-left: 70rpx;
+  margin-top: 30rpx;
+  margin-bottom: 30rpx;
+}
+
+.block_user {
+  display: flex;
+  direction: row;
+  align-items: center;
+}
+
+.block_name {
+  font-size: 14px;
+  color: #888;
+  margin-left: 10px;
+}
+
+.blockgood_img{
+  height: 18px;
+  width: 18px;
+  margin-right: 15rpx;
+}

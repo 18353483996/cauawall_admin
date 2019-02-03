@@ -1,0 +1,37 @@
+<!--index.wxml-->
+<view class="container" style="height:{{index_height}}rpx">
+  <view class="userinfo">
+    <view class="personal_1" style="margin-top: {{index_height-900}}rpx;">
+      <view class="personal">
+        <button wx:if="{{!hasUserInfo}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo" class="userinfo-avatar">
+          <view class="shouquan">
+            <text>点此</text>
+            <text>授权</text>
+            <text>信息</text>
+          </view>
+        </button>
+        <block wx:else>
+          <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+        </block>
+      </view>
+    </view>
+
+    <navigator url="../message/message">
+      <view class="circle_message">消息墙</view>
+    </navigator>
+
+    <navigator url="../souvenir/souvenir">
+      <view class="circle_souvenir">拼车车</view>
+    </navigator>
+
+    <navigator url="../meet/meet">
+      <view class="circle_chat">一期一遇</view>
+    </navigator>
+
+    <navigator url="../answer/answer">
+      <view class="circle_answer">你问我答</view>
+    </navigator>
+
+  </view>
+  <view class="company_name">航大易网（天津）互联网科技有限公司</view>
+</view>

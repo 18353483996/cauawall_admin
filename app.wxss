@@ -1,0 +1,5 @@
+/**app.wxss**/
+
+.container {
+  background-image: url('https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1547288686151&di=2bd09b9bce00f8683f47f4c016b7734e&imgtype=0&src=http%3A%2F%2Fimg.mp.sohu.com%2Fupload%2F20170718%2F402bf298f938448da3c6f38fca9cfeec_th.png');
+}
